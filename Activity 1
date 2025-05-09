@@ -1,0 +1,15 @@
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def describe(self):
+        return f"'{self.title}' by {self.author}"
+
+class ComicBook(Book):
+    def __init__(self, title, author, illustrator):
+        super().__init__(title, author)
+        self.illustrator = illustrator
+
+    def describe(self):
+        return f"Comic: '{self.title}' by {self.author}, illustrated by {self.illustrator}"
